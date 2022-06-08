@@ -28,6 +28,7 @@
 body {
   font-size: calc(var(--index) * 0.8);
   width: 100%;
+  height: var(--depth);
   overflow-x: hidden;
   color: var(--white);
   background-color: var(--black);
@@ -51,4 +52,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--transition), opacity 0.75s ease;
+  will-change: transform;
 }
