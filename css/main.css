@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --index: calc(1vw + 1vh);
+  --gutter: 30px;
+  --side-small: 26;
+  --side-big: 36;
+  --depth: 4000px;
+  --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  --white: #fff;
+  --black: #000;
+}
+
+@font-face {
+  font-family: raleway_c;
+  src: url(../assets/fonts/raleway-v22-cyrillic-300.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: raleway_c;
+  src: url(../assets/fonts/raleway-v22-cyrillic-100.woff2);
+  font-weight: 100;
+}
+
+body {
+  font-size: calc(var(--index) * 0.8);
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--white);
+  background-color: var(--black);
+  font-family: raleway_c, serif;
+  line-height: 1.75;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+.gallery {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
