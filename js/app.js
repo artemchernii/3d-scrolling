@@ -22,3 +22,21 @@ window.onscroll = function () {
   });
 };
 window.scroll(0, 1);
+
+// Audio player
+
+const soundButton = document.querySelector('.soundbutton');
+const audio = document.querySelector('.audio');
+
+soundButton.addEventListener('click', () => {
+  soundButton.classList.toggle('paused');
+  audio.paused ? audio.play() : audio.pause();
+});
+
+window.onfocus = () => {
+  soundButton.classList.contains('paused') ? audio.pause() : audio.play();
+};
+
+window.onblur = () => {
+  audio.pause();
+};
